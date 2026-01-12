@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin_2">
+
+    <View
+        android:id="@+id/centerView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/buttonTrash"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin_2"
+        android:background="@drawable/fab_transparent"
+        android:src="@drawable/icon_delete" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="@dimen/margin_3"
+        android:textStyle="bold"
+        android:layout_toStartOf="@+id/buttonTrash"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/accent"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOnSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="@dimen/margin"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="@string/in_person"
+        android:textColor="@color/text_secondary" />
+
+    <CheckBox
+        android:id="@+id/checkBoxHybrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="@string/hybrid"
+        android:textColor="@color/text_secondary" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRemote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="@string/remote"
+        android:textColor="@color/text_secondary" />
+
+    <TextView
+        android:id="@+id/textState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxHybrid"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/state"
+        android:textColor="@color/accent"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textStateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textState"
+        android:layout_alignStart="@+id/textState"
+        android:text="@string/not_specified"
+        android:textColor="@color/text_secondary" />
+
+    <TextView
+        android:id="@+id/textCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxHybrid"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_toEndOf="@+id/centerView"
+        android:text="@string/city"
+        android:textColor="@color/accent"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textCityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCity"
+        android:layout_toEndOf="@+id/centerView"
+        android:text="@string/not_specified"
+        android:textColor="@color/text_secondary" />
+</RelativeLayout>

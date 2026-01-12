@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="main">#3F9BF6</color>
+    <color name="accent">#0588CA</color>
+    <color name="background_app">#000000</color>
+    <color name="background_fragment">#1F2122</color>
+    <color name="background_popup">#1E1E20</color>
+    <color name="corners">#61FFFFFF</color>
+    <color name="corners_disabled">#32FFFFFF</color>
+    <color name="list_divider">#56FFFFFF</color>
+    <color name="text_primary">#e3e4e6</color>
+    <color name="text_secondary">#9c9fa6</color>
+    <color name="item_disabled">#171819</color>
+</resources>

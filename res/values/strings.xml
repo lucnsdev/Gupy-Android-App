@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Gupy</string>
+    <string name="lucns">Developed by @lucns</string>
+
+    <string name="searching_for_vacancy">Buscando vagas&#8230;</string>
+    <string name="search_for_vacancy">Search for</string>
+    <string name="suggestion">suggestion</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="select_a_state">Select a state</string>
+    <string name="select_a_city">Select a city</string>
+    <string name="registered_vacancies">Registered Vacancies</string>
+    <string name="copy">Copy</string>
+    <string name="copied">Copied</string>
+    <string name="register">Register</string>
+    <string name="no_registered_vacancies">No registered vacancies</string>
+    <string name="no_vacancies">No vacancies</string>
+    <string name="vacancy_data">Vacancy data</string>
+    <string name="registered">Registered</string>
+    <string name="work_model">Work model:</string>
+    <string name="locality">Locality:</string>
+    <string name="not_specified">Not specified</string>
+    <string name="complete">Complete</string>
+    <string name="counter_zero">0/0</string>
+
+    <string name="format_requesting">Requesting vacancies %d/%d</string>
+    <string name="format_counter">%d/%d</string>
+
+    <string name="hint_vacancy_name">Name. Ex.: Business manager</string>
+    <string name="title">Title</string>
+    <string name="in_person">In person</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="remote">Remote</string>
+    <string name="unknown">Unknown</string>
+
+    <string name="vacancy_description">Vacancy Description</string>
+    <string name="responsibilities_duties">Responsibilities and Duties</string>
+    <string name="requirements_qualifications">Requirements and qualifications</string>
+    <string name="additional_information">Additional Information</string>
+
+    <string name="today">Updated today</string>
+    <string name="yesterday">Updated yesterday</string>
+    <string name="updated_in">Updated in</string>
+    <string name="never_updated">Never updated</string>
+    <string name="expired_time">Expired time</string>
+    <string name="update">Update</string>
+    <string name="update_now">Update now</string>
+    <string name="updating_now">Updating now&#8230;</string>
+    <string name="updated">Updated</string>
+
+    <string name="notification_silent" translatable="false">Silent</string>
+    <string name="notification_alert" translatable="false">Alert</string>
+    <string name="notification_title">Searching for new vacancies&#8230;</string>
+    <string name="notification_text">Founded %d %s</string>
+    <string name="vacancy">Vacancy</string>
+    <string name="vacancy_details">Vacancy Details</string>
+    <string name="vacancies_viewed">Viewed Vacancies</string>
+    <string name="vacancies">Vacancies</string>
+    <string name="vacancies_founded">%d %s founded</string>
+    <string name="vacancies_news">Has news</string>
+    <string name="vacancy_register">Vacancy Register</string>
+    <string name="vacancy_register_2">Vacancy Register</string>
+    <string name="search">Search</string>
+    <string name="mark_viewed">Mark Viewed</string>
+    <string name="marked_viewed">Marked</string>
+    <string name="no_news">No news</string>
+    <string name="published_date">Published Date</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="executions">Executions</string>
+    <string name="another">Another</string>
+    <string name="all_vacancies">All Vacancies</string>
+    <string name="searching_for">Searching for %s</string>
+    <string name="and">and</string>
+
+    <string name="error_no_connection">No internet connection</string>
+    <string name="error_retrieve">Retriever error</string>
+    <string name="error_registered_vacancies">Registered vacancies error</string>
+    <string name="error_code">Gupy request error code: %d</string>
+</resources>

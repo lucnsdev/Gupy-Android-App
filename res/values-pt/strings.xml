@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Gupy</string>
+    <string name="lucns">Desenvolvido por @lucns</string>
+
+    <string name="searching_for_vacancy">Buscando vagas&#8230;</string>
+    <string name="search_for_vacancy">Buscar por</string>
+    <string name="suggestion">sugestão</string>
+    <string name="state">Estado</string>
+    <string name="city">Cidade</string>
+    <string name="select_a_state">Selecione um estado</string>
+    <string name="select_a_city">Selecione uma cidade</string>
+    <string name="registered_vacancies">Vagas Registradas</string>
+    <string name="copy">Copiar</string>
+    <string name="copied">Copiado</string>
+    <string name="register">Registrar</string>
+    <string name="no_registered_vacancies">Nenhuma vaga registrada</string>
+    <string name="no_vacancies">Nenhuma vaga</string>
+    <string name="vacancy_data">Dados da vaga</string>
+    <string name="registered">Registrado</string>
+    <string name="work_model">Modelo de trabalho:</string>
+    <string name="locality">Localidade:</string>
+    <string name="not_specified">Não especificado</string>
+    <string name="complete">Completo</string>
+    <string name="counter_zero">0/0</string>
+
+    <string name="format_requesting">Requisitando vagas %d/%d</string>
+    <string name="format_counter">%d/%d</string>
+
+    <string name="hint_vacancy_name">Nome. Ex.: Administração</string>
+    <string name="title">Titulo</string>
+    <string name="in_person">Presencial</string>
+    <string name="hybrid">Hibrido</string>
+    <string name="remote">Remoto</string>
+    <string name="unknown">Desconhecido</string>
+
+    <string name="vacancy_description">Descrição da vaga</string>
+    <string name="responsibilities_duties">Responsabilidades e atribuições</string>
+    <string name="requirements_qualifications">Requisitos e qualificações</string>
+    <string name="additional_information">Informação adicional</string>
+
+    <string name="today">Atualizado hoje</string>
+    <string name="yesterday">Atualizado ontme</string>
+    <string name="updated_in">Atualizado em</string>
+    <string name="never_updated">Nunca atualizado</string>
+    <string name="expired_time">Expira em</string>
+    <string name="update">Atualizar</string>
+    <string name="update_now">Atualizar agora</string>
+    <string name="updating_now">Atualizando agora&#8230;</string>
+    <string name="updated">Atualizado</string>
+
+    <string name="notification_title">Buscando novas vagas&#8230;</string>
+    <string name="notification_text">Encontrados %d %s</string>
+    <string name="vacancy">Vaga</string>
+    <string name="vacancy_details">Detalhes da vaga</string>
+    <string name="vacancies_viewed">Vagas visualizadas</string>
+    <string name="vacancies">Vagas</string>
+    <string name="vacancies_founded">%d %s encontradas</string>
+    <string name="vacancies_news">Novas Vagas</string>
+    <string name="vacancy_register">Registro de Vagas</string>
+    <string name="vacancy_register_2">Registrar uma vaga</string>
+    <string name="search">Buscar</string>
+    <string name="mark_viewed">Marcar como visualizadas</string>
+    <string name="marked_viewed">Marcado</string>
+    <string name="no_news">Nenhuma vaga nova</string>
+    <string name="published_date">Publicada em</string>
+    <string name="expiration_date">Expira em</string>
+    <string name="executions">Execuções</string>
+    <string name="another">Outra</string>
+    <string name="all_vacancies">Todas as vagas acima</string>
+    <string name="searching_for">Buscando por %s</string>
+    <string name="and">e</string>
+
+    <string name="error_no_connection">Sem conexão à internet.</string>
+    <string name="error_retrieve">Erro ao analizar dados.</string>
+    <string name="error_registered_vacancies">Erro nos dados de vagas registradas.</string>
+    <string name="error_code">Erro de requisição. Código: %d</string>
+</resources>

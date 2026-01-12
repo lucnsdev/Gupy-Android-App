@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="state_values">
+        <item>Selecione um estado</item>
+    </string-array>
+</resources>
