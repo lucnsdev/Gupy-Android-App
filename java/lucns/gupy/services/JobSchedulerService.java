@@ -83,7 +83,7 @@ public class JobSchedulerService extends JobService {
                     notificationProvider.showAlert(getString(R.string.vacancies_news), String.format(Locale.getDefault(), getString(R.string.vacancies_founded), news.length, getString(news.length == 1 ? R.string.vacancy : R.string.vacancies)), null);
                     return;
                 }
-                news = getIfNotContains(news, viewedVacancies);
+                news = removeDuplicities(getIfNotContains(news, viewedVacancies));
                 if (news.length == 0) {
                     notificationProvider.hide();
                     return;
@@ -116,6 +116,21 @@ public class JobSchedulerService extends JobService {
                 for (Vacancy v : a) {
                     boolean f = false;
                     for (Vacancy v2 : b) {
+                        if (v.id == v2.id) {
+                            f = true;
+                            break;
+                        }
+                    }
+                    if (!f) list.add(v);
+                }
+                return list.toArray(new Vacancy[0]);
+            }
+
+            private Vacancy[] removeDuplicities(Vacancy[] vacancies) {
+                List<Vacancy> list = new ArrayList<>();
+                for (Vacancy v : vacancies) {
+                    boolean f = false;
+                    for (Vacancy v2 : list) {
                         if (v.id == v2.id) {
                             f = true;
                             break;
