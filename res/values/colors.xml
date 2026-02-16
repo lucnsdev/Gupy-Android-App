@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="main">#3F9BF6</color>
-    <color name="accent">#0588CA</color>
+    <color name="accent">#758FE9</color>
     <color name="background_app">#000000</color>
     <color name="background_fragment">#1F2122</color>
     <color name="background_popup">#1E1E20</color>
@@ -12,4 +10,13 @@
     <color name="text_primary">#e3e4e6</color>
     <color name="text_secondary">#9c9fa6</color>
     <color name="item_disabled">#171819</color>
+    <color name="edittext">#21FFFFFF</color>
+
+    <color name="button_gradient_start">#8771bc</color>
+    <color name="button_gradient_end">#497fc7</color>
+    <color name="button_gradient_start_2">#1e2e47</color>
+    <color name="button_gradient_end_2">#312941</color>
+
+    <color name="fragment_gradient_start">#312941</color>
+    <color name="fragment_gradient_end">#1F2122</color>
 </resources>

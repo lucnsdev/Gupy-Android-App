@@ -41,5 +41,5 @@
         android:paddingStart="@dimen/margin_2"
         android:paddingEnd="@dimen/margin_2"
         android:scrollbarSize="1px"
-        android:scrollbarThumbVertical="@color/main" />
+        android:scrollbarThumbVertical="@color/accent" />
 </RelativeLayout>

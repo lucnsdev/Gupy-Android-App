@@ -10,6 +10,7 @@
     </item>
 
     <!-- NORMAL STATE -->
+
     <item>
         <ripple android:color="@android:color/white">
             <item android:id="@android:id/mask">
@@ -20,10 +21,13 @@
             </item>
             <item>
                 <shape android:shape="rectangle">
-                    <gradient
-                        android:startColor="@color/button_gradient_start"
-                        android:endColor="@color/button_gradient_end"
-                        android:angle="0"/>
+                    <gradient android:angle="0" android:endColor="@color/button_gradient_end" android:startColor="@color/button_gradient_start" />
+                    <corners android:radius="@dimen/margin_4" />
+                </shape>
+            </item>
+            <item android:shape="rectangle" android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp">
+                <shape android:shape="rectangle">
+                    <gradient android:angle="0" android:endColor="@color/button_gradient_end_2" android:startColor="@color/button_gradient_start_2" />
                     <corners android:radius="@dimen/margin_4" />
                 </shape>
             </item>
