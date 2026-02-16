@@ -126,6 +126,11 @@ public class NotificationProvider {
         builder.setCategory(Notification.CATEGORY_SERVICE);
         builder.setContentIntent(stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
         notificationManager.notify(NOTIFICATION_CODE, builder.build());
+
+        try {
+            context.unregisterReceiver(receiver);
+        } catch (Exception ignore) {
+        }
     }
 
     public void show(String title, String text, String sub, String action) { // action button only works if app is running

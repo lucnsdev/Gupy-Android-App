@@ -90,7 +90,7 @@ public class LocalityActivity extends Activity {
         /*
         ShapeDrawable shapeDrawable = new ShapeDrawable();
         shapeDrawable.setIntrinsicWidth(1);
-        shapeDrawable.getPaint().setColor(getColor(R.color.main));
+        shapeDrawable.getPaint().setColor(getColor(R.color.accent));
         spinner.setVerticalScrollbarThumbDrawable(shapeDrawable);
         spinner.setSelector
         spinner.setAdapter(new ArrayAdapter<Locality>(this, 0, localities) {

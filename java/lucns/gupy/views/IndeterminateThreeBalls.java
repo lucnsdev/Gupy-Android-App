@@ -64,7 +64,7 @@ public class IndeterminateThreeBalls extends RelativeLayout {
         setLayoutParams(params);
         for (int i = 0; i < circlesQuantity; i++) {
             CircleView circleView = new CircleView(getContext());
-            circleView.setColor(getContext().getColor(R.color.main));
+            circleView.setColor(getContext().getColor(R.color.accent));
             LayoutParams circleParams = new LayoutParams(circleSize, circleSize);
             addView(circleView, circleParams);
             circleView.setLayoutParams(circleParams);

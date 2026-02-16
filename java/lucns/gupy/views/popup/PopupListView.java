@@ -62,11 +62,11 @@ public class PopupListView extends PopupView {
                     tv.setText(titles[position]);
                     tv.setTypeface(Typeface.DEFAULT_BOLD);
                     tv.setMaxLines(1);
-                    tv.setTextColor(getContext().getColor(selectedIndex == position ? R.color.main : R.color.text_primary));
+                    tv.setTextColor(getContext().getColor(selectedIndex == position ? R.color.accent : R.color.text_primary));
                     tv.setBackground(getContext().getDrawable(R.drawable.item_background));
                     views[position] = tv;
                 } else {
-                    ((TextView) views[position]).setTextColor(getContext().getColor(selectedIndex == position ? R.color.main : R.color.text_primary));
+                    ((TextView) views[position]).setTextColor(getContext().getColor(selectedIndex == position ? R.color.accent : R.color.text_primary));
                 }
                 return views[position];
             }

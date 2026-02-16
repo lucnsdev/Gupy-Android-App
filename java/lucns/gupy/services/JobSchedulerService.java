@@ -3,12 +3,6 @@ package lucns.gupy.services;
 import android.app.job.JobParameters;
 import android.app.job.JobService;
 import android.content.Intent;
-import android.util.Log;
-import android.view.View;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,16 +10,12 @@ import java.util.List;
 import java.util.Locale;
 
 import lucns.gupy.R;
-import lucns.gupy.activities.FragmentVacancy;
-import lucns.gupy.activities.VacanciesSearchActivity;
 import lucns.gupy.rh.GupyUtils;
 import lucns.gupy.rh.api.ResponseCallback;
 import lucns.gupy.rh.api.VacanciesRequester;
 import lucns.gupy.rh.models.Vacancy;
-import lucns.gupy.utils.Annotator;
 import lucns.gupy.utils.Notify;
 import lucns.gupy.utils.TimeRegister;
-import lucns.gupy.utils.Utils;
 
 public class JobSchedulerService extends JobService {
 
@@ -85,6 +75,10 @@ public class JobSchedulerService extends JobService {
                 }
                 news = removeDuplicities(getIfNotContains(news, viewedVacancies));
                 if (news.length == 0) {
+                    notificationProvider.hide();
+                    return;
+                }
+                if (previousNewsVacancies != null && previousNewsVacancies.length == news.length) {
                     notificationProvider.hide();
                     return;
                 }

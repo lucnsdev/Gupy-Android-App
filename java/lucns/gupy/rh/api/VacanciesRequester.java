@@ -2,13 +2,10 @@ package lucns.gupy.rh.api;
 
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 
-import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
-import java.util.Locale;
 import java.util.Queue;
 
 import lucns.gupy.rh.GupyUtils;

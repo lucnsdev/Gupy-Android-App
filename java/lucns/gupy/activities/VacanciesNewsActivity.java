@@ -102,7 +102,7 @@ public class VacanciesNewsActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.fab) {
-                    popupMenu.getMenu().getItem(2).setEnabled(vacancies != null && vacancies.length > 0 && !markedAsViewed);
+                    popupMenu.getMenu().getItem(3).setEnabled(vacancies != null && vacancies.length > 0 && !markedAsViewed);
                     popupMenu.show();
                 } else if (v.getId() == R.id.fab2) {
                     startActivity(new Intent(VacanciesNewsActivity.this, VacanciesSearchActivity.class), ActivityOptions.makeSceneTransitionAnimation(VacanciesNewsActivity.this).toBundle());
@@ -146,6 +146,7 @@ public class VacanciesNewsActivity extends Activity {
                     markedAsViewed = true;
                     GupyUtils.setViewedVacancies(vacancies);
                     Notify.showToast(R.string.marked_viewed);
+                    readNewVacancies();
                 } else if (item.getItemId() == R.id.vacancies_viewed) {
                     startActivity(new Intent(VacanciesNewsActivity.this, VacanciesViewedActivity.class), ActivityOptions.makeSceneTransitionAnimation(VacanciesNewsActivity.this).toBundle());
                     new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
@@ -194,12 +195,15 @@ public class VacanciesNewsActivity extends Activity {
     }
 
     private void readNewVacancies() {
+        sliderView.removeAllFragments();
         vacancies = GupyUtils.getNewVacancies();
         if (vacancies == null || vacancies.length == 0) {
             textStatus.setText(R.string.no_news);
+            textCounter.setText("");
             return;
         }
         textCounter.setText(String.format(Locale.getDefault(), getString(R.string.format_counter), sliderView.getCurrentIndex() + 1, vacancies.length));
+
         sliderView.setVisibility(View.VISIBLE);
         for (Vacancy vacancy : vacancies) {
             sliderView.addFragment(new FragmentVacancy(VacanciesNewsActivity.this, vacancy));
