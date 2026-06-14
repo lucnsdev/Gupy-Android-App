@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_3">
+
+    <TextView
+        android:id="@+id/textState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/state"
+        android:textColor="@color/text_primary"
+        android:textSize="56sp" />
+
+    <RelativeLayout
+        android:id="@+id/rootContent"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/textState">
+
+        <lucns.gupy.views.CustomSpinner
+            android:id="@+id/spinner"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp" />
+
+        <lucns.gupy.views.IndeterminateThreeBalls
+            android:id="@+id/progressBar"
+            android:layout_width="12dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

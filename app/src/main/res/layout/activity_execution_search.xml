@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_marginTop="@dimen/margin_4">
+
+        <ImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@drawable/fab_transparent"
+            android:src="@drawable/icon_arrow_back" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/buttonBack"
+            android:singleLine="true"
+            android:text="@string/enterprises"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/margin_4">
+
+        <TextView
+            android:id="@+id/textStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/stopped"
+            android:textColor="@color/accent"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textStatus"
+            android:layout_marginTop="@dimen/margin"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/textUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:text="@string/counter_zero"
+            android:textColor="@android:color/white" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:checked="false"
+            android:layout_below="@+id/textUpdate"
+            android:text="@string/from_zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="220dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/checkBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_4"
+            android:background="@drawable/button_state_2"
+            android:text="@string/run" />
+
+        <Button
+            android:id="@+id/buttonVacancies"
+            android:layout_width="220dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_4"
+            android:background="@drawable/button_state_2"
+            android:text="@string/vacancies" />
+
+        <Button
+            android:id="@+id/buttonEnterprises"
+            android:layout_width="220dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/buttonVacancies"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_4"
+            android:background="@drawable/button_state_2"
+            android:text="@string/enterprises" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#3161FF</color>
+    <color name="accent_title">#747DFF</color>
+    <color name="background_app">#000000</color>
+    <color name="background_fragment">#1F2122</color>
+    <color name="background_popup">#1E1E20</color>
+    <color name="corners">#61FFFFFF</color>
+    <color name="corners_disabled">#32FFFFFF</color>
+    <color name="list_divider">#56FFFFFF</color>
+    <color name="text_primary">#e3e4e6</color>
+    <color name="text_secondary">#9c9fa6</color>
+    <color name="item_disabled">#171819</color>
+    <color name="edittext">#21FFFFFF</color>
+
+    <color name="button_gradient_start">#6038C3</color>
+    <color name="button_gradient_end">#243DCC</color>
+    <color name="button_gradient_start_2">#100F43</color>
+    <color name="button_gradient_end_2">#211240</color>
+
+    <color name="fragment_gradient_start">#1F123C</color>
+    <color name="fragment_gradient_end">#101026</color>
+    <color name="red">#FF2D63</color>
+    <color name="orange">#FF9600</color>
+    <color name="green">#20E78E</color>
+</resources>
