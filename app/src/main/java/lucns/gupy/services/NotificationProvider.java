@@ -113,7 +113,10 @@ public class NotificationProvider {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(BUTTON_CLICK);
-        context.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED);
+        try {
+            context.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED);
+        } catch (Exception ignore) {
+        }
     }
 
     public int getNotificationCode() {
@@ -186,7 +189,10 @@ public class NotificationProvider {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(BUTTON_CLICK);
-        context.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED);
+        try {
+            context.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED);
+        } catch (Exception ignore) {
+        }
     }
 
     public void show(int title, int text, int sub) {
@@ -232,7 +238,10 @@ public class NotificationProvider {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(BUTTON_CLICK);
-        context.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED);
+        try {
+            context.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED);
+        } catch (Exception ignore) {
+        }
     }
 
     public void hide() {

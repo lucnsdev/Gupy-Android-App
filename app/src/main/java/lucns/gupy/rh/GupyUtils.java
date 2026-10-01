@@ -200,7 +200,7 @@ public class GupyUtils {
                 vacancy.type = jsonVacancy.getString("type"); // vacancy_type_internship, vacancy_type_effective,
                 vacancy.workplaceType = jsonVacancy.optString("workplaceType"); // on-site, hybrid, remote
                 vacancy.url = jsonVacancy.getString("jobUrl");
-                vacancy.locality = new Locality(jsonVacancy.getString("country"), jsonVacancy.getString("state"), jsonVacancy.getString("city"));
+                vacancy.locality = new Locality(jsonVacancy.optString("country"), jsonVacancy.getString("state"), jsonVacancy.getString("city"));
                 vacancy.publicationDate = jsonVacancy.getString("publishedDate");
                 vacancy.expirationDate = jsonVacancy.getString("applicationDeadline");
                 vacancies[i] = vacancy;

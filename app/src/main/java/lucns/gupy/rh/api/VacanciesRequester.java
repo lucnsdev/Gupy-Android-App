@@ -81,7 +81,7 @@ public class VacanciesRequester {
                     if (vacancy.locality.city != null) {
                         filters += "&city=" + URLEncoder.encode(vacancy.locality.city, StandardCharsets.UTF_8);
                     }
-                    url = "https://employability-portal.gupy.io/api/v1/jobs?limit=100&offset=0&sortBy=publishedDate&sortOrder=desc" + filters;
+                    url = "https://portal.gupy.io/api/job-search/jobs?limit=100&offset=0" + filters;
                     request = requestGet(url);
                     if (responseCode == 200) {
                         Vacancy[] vacancies = GupyUtils.jsonToVacancies(request);

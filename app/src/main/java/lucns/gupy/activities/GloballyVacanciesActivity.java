@@ -136,7 +136,8 @@ public class GloballyVacanciesActivity extends Activity {
 
                             @Override
                             public int compare(Vacancy v, Vacancy v2) {
-                                return Integer.compare(v2.id, v.id);
+                                //return Integer.compare(v2.id, v.id);
+                                return v2.locality.city.compareTo(v.locality.city);
                             }
                         });
                         textStatus.setText(vacancies.length + "/" + getString(R.string.vacancies));
