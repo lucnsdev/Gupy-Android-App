@@ -39,7 +39,7 @@ public class GlobalVacanciesRetriever extends BaseProvider {
         thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                Enterprise[] enterprises = getAllEnterprisesData();
+                Enterprise[] enterprises = GupyUtils.getAllEnterprises(); // DEPRECATED getAllEnterprisesData();
                 if (enterprises == null) {
                     isRunning = false;
                     return;

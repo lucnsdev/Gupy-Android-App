@@ -1,11 +1,11 @@
 package lucns.gupy.rh;
 
-import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -13,8 +13,36 @@ import lucns.gupy.rh.models.Enterprise;
 import lucns.gupy.rh.models.Locality;
 import lucns.gupy.rh.models.Vacancy;
 import lucns.gupy.utils.Annotator;
+import lucns.gupy.utils.App;
 
 public class GupyUtils {
+
+    public static Enterprise[] getAllEnterprises() {
+        String content;
+        try {
+            InputStream stream = App.getContext().getAssets().open("Enterprises.json");
+            int size = stream.available();
+            byte[] buffer = new byte[size];
+            stream.read(buffer);
+            stream.close();
+            content = new String(buffer);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        try {
+            JSONArray jsonArray = new JSONArray(content);
+            Enterprise[] enterprises = new Enterprise[jsonArray.length()];
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonEnterprise = jsonArray.getJSONObject(i);
+                enterprises[i] = new Enterprise(jsonEnterprise.getInt("id"), jsonEnterprise.getString("name"), jsonEnterprise.getString("url"));
+            }
+            return enterprises;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public static void setViewedVacancies(Vacancy[] vacancies) {
         try {

@@ -3,11 +3,11 @@ package lucns.gupy.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,6 +78,7 @@ public class EnterprisesActivity extends Activity {
     }
 
     private void search() {
+        AssetManager assetManager = getAssets();
         new Thread(new Runnable() {
             @Override
             public void run() {
