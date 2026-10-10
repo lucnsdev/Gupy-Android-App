@@ -70,6 +70,7 @@
     <string name="another">Another</string>
     <string name="all_vacancies">All Vacancies</string>
     <string name="searching_for">Searching for %s</string>
+    <string name="search_globally">Search Globally?</string>
     <string name="and">and</string>
     <string name="enterprises">Enterprises</string>
     <string name="touch_to_open">Touch to open.</string>

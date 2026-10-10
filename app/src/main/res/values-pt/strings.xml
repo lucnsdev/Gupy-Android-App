@@ -68,6 +68,7 @@
     <string name="another">Outra</string>
     <string name="all_vacancies">Todas as vagas acima</string>
     <string name="searching_for">Buscando por %s</string>
+    <string name="search_globally">Buscar vagas globalmente?</string>
     <string name="and">e</string>
     <string name="enterprises">Empresas</string>
     <string name="touch_to_open">Toque para abrir.</string>

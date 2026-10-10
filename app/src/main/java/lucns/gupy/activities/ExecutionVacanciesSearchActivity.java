@@ -1,9 +1,11 @@
 package lucns.gupy.activities;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
 import android.content.ComponentName;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.NetworkCapabilities;
@@ -29,6 +31,8 @@ public class ExecutionVacanciesSearchActivity extends Activity {
 
     private TextView textStatus, textUpdate;
     private MainService mainService;
+    private Dialog dialog;
+    private Button buttonRun;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,14 +58,14 @@ public class ExecutionVacanciesSearchActivity extends Activity {
                 startActivity(new Intent(ExecutionVacanciesSearchActivity.this, EnterprisesActivity.class));
             }
         });
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonRun = findViewById(R.id.buttonRun);
+        buttonRun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (mainService.isRunning()) {
                     mainService.cancel();
                     textStatus.setText(R.string.stopped);
-                    button.setText(R.string.run);
+                    buttonRun.setText(R.string.run);
                     startSchedule(false);
                 } else {
                     String packageName = getPackageName();
@@ -72,10 +76,7 @@ public class ExecutionVacanciesSearchActivity extends Activity {
                         startActivity(intent);
                         return;
                     }
-                    mainService.run(checkBox.isChecked());
-                    textStatus.setText(R.string.running);
-                    button.setText(android.R.string.cancel);
-                    stopSchedule();
+                    showDialogVacancySearch(checkBox.isChecked());
                 }
             }
         });
@@ -94,16 +95,38 @@ public class ExecutionVacanciesSearchActivity extends Activity {
                     @Override
                     public void onFinish() {
                         textStatus.setText(R.string.stopped);
-                        button.setText(R.string.run);
+                        buttonRun.setText(R.string.run);
                     }
 
                     @Override
                     public void onError() {
-                        button.setText(R.string.run);
+                        buttonRun.setText(R.string.run);
                     }
                 });
             }
         });
+    }
+
+    private void showDialogVacancySearch(boolean fromZero) {
+        dialog = new Dialog(this, R.style.DialogTheme);
+        dialog.setCancelable(true);
+        dialog.setContentView(R.layout.dialog_confirmation);
+
+        View.OnClickListener onClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.getId() == R.id.buttonPositive) {
+                    mainService.run(fromZero);
+                    textStatus.setText(R.string.running);
+                    buttonRun.setText(android.R.string.cancel);
+                    stopSchedule();
+                }
+                dialog.dismiss();
+            }
+        };
+        dialog.findViewById(R.id.buttonPositive).setOnClickListener(onClickListener);
+        dialog.findViewById(R.id.buttonNegative).setOnClickListener(onClickListener);
+        dialog.show();
     }
 
     @Override
